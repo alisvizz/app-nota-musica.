@@ -1,0 +1,159 @@
+/* Fondo estilo aula */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background: url('aula.jpg') no-repeat center center fixed; 
+    background-size: cover;
+    color: #333;
+    overflow: hidden;
+  }
+  
+  /* Contenedor de Profe */
+  #profeNota {
+    margin-top: 50px;
+    max-width: 600px;
+    position: relative;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Imagen de Profe */
+  .profeImagen {
+    width: 150px;
+    height: auto;
+  }
+  
+  /* Contenedor para las nubes alrededor del Profe */
+  .contenedorNubes {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+  }
+  
+  /* Estilos de las nubes de preguntas */
+  .nubePregunta {
+    background-color: #fff;
+    border: 2px solid #b3e5fc;
+    border-radius: 30px;
+    padding: 15px 25px;
+    margin: 5px;
+    display: inline-block;
+    cursor: pointer;
+    font-size: 16px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    animation: flotar 4s ease-in-out infinite;
+  }
+  
+  /* Efecto de flotación */
+  @keyframes flotar {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+  
+  /* Efecto de hover en las nubes de preguntas */
+  .nubePregunta:hover {
+    background-color: #b3e5fc;
+    transform: scale(1.05);
+  }
+  
+  /* Estilos para la respuesta */
+  .respuesta {
+    color: rgb(65, 135, 240);
+    font-weight: bold;
+    margin-top: 20px;
+  }
+
+  /* Estilos generales */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: url('aula.jpg') no-repeat center center fixed; 
+    background-size: cover;
+    color: #333;
+  }
+  
+  /* Contenedor de las preguntas */
+#contenedorNubes {
+    margin-bottom: 1cm; /* Añade un poco de margen para subir el contenedor */
+  }
+ 
+  /* Ajustes para el contenedor del piano en posición horizontal a la izquierda */
+#footerPiano {
+    position: fixed;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    background: none;
+    padding: 0;
+    z-index: 10;
+    box-shadow: none;
+  }
+  
+  /* Contenedor de las teclas del piano en horizontal */
+  .piano {
+    display: flex;
+  }
+  
+  /* Estilos de las teclas con tamaño aumentado */
+  .tecla {
+    width: 50px;           /* Ancho aumentado */
+    height: 180px;         /* Altura aumentada */
+    border: 1px solid #333;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    font-weight: bold;
+  }
+  
+  .tecla::after {
+    content: attr(data-note); /* Muestra el nombre de la nota */
+    position: absolute;
+    top: 10px; /* Posición para aparecer encima de la tecla */
+    font-size: 16px;
+    font-weight: bold;
+    opacity: 0; /* Oculta el nombre por defecto */
+    transition: opacity 0.2s ease-in-out;
+  }
+  
+  .tecla.blanca {
+    background-color: white;
+  }
+  
+  .tecla.blanca::after {
+    color: black;
+  }
+  
+  .tecla.negra {
+    background-color: black;
+    width: 35px;           /* Ancho aumentado */
+    height: 120px;         /* Altura aumentada */
+    margin: 0 -17px;
+    z-index: 1;
+  }
+  
+  .tecla.negra::after {
+    color: white;
+  }
+  
+  .tecla:hover::after {
+    opacity: 1; /* Muestra el nombre al pasar el ratón por encima */
+  }
+  

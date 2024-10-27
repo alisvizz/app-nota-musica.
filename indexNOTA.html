@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profe Nota</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<!-- Pie de página con el piano interactivo -->
+<footer id="footerPiano">
+    <div class="piano">
+      <div class="tecla blanca" data-note="C"></div>
+      <div class="tecla negra" data-note="C#"></div>
+      <div class="tecla blanca" data-note="D"></div>
+      <div class="tecla negra" data-note="D#"></div>
+      <div class="tecla blanca" data-note="E"></div>
+      <div class="tecla blanca" data-note="F"></div>
+      <div class="tecla negra" data-note="F#"></div>
+      <div class="tecla blanca" data-note="G"></div>
+      <div class="tecla negra" data-note="G#"></div>
+      <div class="tecla blanca" data-note="A"></div>
+      <div class="tecla negra" data-note="A#"></div>
+      <div class="tecla blanca" data-note="B"></div>
+    </div>
+    <div id="noteDisplay"></div>
+ </footer>
+
+<body>
+  <!-- Contenido principal: Profe -->
+  <div id="profeNota">
+    <h1>¡Hola! Soy tu Profe de música 🎶</h1>
+    <img src="profe.png" alt="Imagen de Mozart" class="profeImagen">
+    <p>Selecciona una pregunta para aprender sobre música:</p>
+    
+    <!-- Contenedor para nubes -->
+    <div class="contenedorNubes" id="contenedorNubes">
+      <!-- Primera serie de preguntas -->
+      <div class="nubePregunta" onclick="responder('acorde')">¿Qué es un acorde?</div>
+      <div class="nubePregunta" onclick="responder('mozart')">¿Quién fue Mozart?</div>
+      <div class="nubePregunta" onclick="responder('escala')">¿Qué es una escala?</div>
+      <div class="nubePregunta" onclick="responder('tempo')">¿Qué significa tempo?</div>
+      <div class="nubePregunta" onclick="responder('beethoven')">¿Quién fue Beethoven?</div>
+    </div>
+    
+    <!-- Área de respuesta -->
+    <p class="respuesta" id="respuesta"></p>
+  </div>
+
+  <!-- Enlace al archivo JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
